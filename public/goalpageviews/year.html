@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.styles.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <body>
+    <section class="top-info-area">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <div class="color-toggle form-check form-switch" style="width: fit-content;">
+                <input class="form-check-input" type="checkbox" role="switch" id="toggle-bgColor">
+                <label class="form-check-label" for="toggle-bgColor">Toggle Dark Mode</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+       <!-- Button trigger modal -->
+       <div class="container goal-page-top my-4">
+        <div class="top-view-row row d-flex justify-content-start align-items-center">
+       <button
+       type="button"
+       class="btn btn-primary open-goal-modal-btn primary-color ms-2"
+       data-bs-toggle="modal"
+       data-bs-target="#exampleModal"
+      >
+       <i class="fa-solid fa-plus"></i>
+      </button>
+          <select
+            class="time-view-select form-select"
+            aria-label="Default select example"
+          >
+            <option value="day">Today's View</option>
+            <option value="week">Weekly View</option>
+            <option value="month">Monthly View</option>
+            <option value="year" selected>Yearly View</option>
+          </select>
+          </div>
+        </div>
+          <div class="container">
+            <div class="select-view-row row d-flex justify-content-between align-items-center text-center">
+              <div class="col-2">
+                <button id="backwardBtn">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+              </div>
+              <div class="col-8">
+                <div class="selected-view">
+                  <h3></h3>
+                  <h2></h2>
+                </div>
+              </div>
+              <div class="col-2">
+                <button id="forwardBtn">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>     
+            </div>
+          </div>
+          <div class="row flex-row my-5 text-center justify-content-center py-5">
+            <h4>
+              Percentage of <span class="selected-time"></span>Goals Completed:
+            </h4>
+            <h3>0%</h3>
+          </div>
+        </section>
+        <!-- unique to each page -->
+    <div class="page-content container">
+
+    </div>
+    <!-- ------------------------------- -->
+     <!-- Modal -->
+     <div
+     class="modal fade"
+     id="exampleModal"
+     tabindex="-1"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog modal-xl">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h2 class="modal-title fs-5" id="exampleModalLabel">Modal</h2>
+           <button
+             type="button"
+             class="btn-close"
+             data-bs-dismiss="modal"
+             aria-label="Close"
+           ></button>
+         </div>
+         <div class="modal-body pick-goal-modal">
+           <div class="pick-goal-container container-fluid">
+             <div class="row">
+               <div class="col-md-4 modal-nav-col">
+                 <div class="row">
+                   <h2>Pick One</h2>
+                 </div>
+                 <hr class="in-between" />
+                 <div class="row">
+                   <div class="list-group" id="list-tab" role="tablist">
+                     <a
+                       class="list-group-item list-group-item-action"
+                       id="list-home-list"
+                       data-bs-toggle="list"
+                       href="#list-home"
+                       role="tab"
+                       aria-controls="aquire-wealth"
+                       >Aquire Wealth</a
+                     >
+                     <a
+                       class="list-group-item list-group-item-action"
+                       id="list-profile-list"
+                       data-bs-toggle="list"
+                       href="#list-profile"
+                       role="tab"
+                       aria-controls="get-fit"
+                       >Get Fit</a
+                     >
+                     <a
+                       class="list-group-item list-group-item-action"
+                       id="list-messages-list"
+                       data-bs-toggle="list"
+                       href="#list-messages"
+                       role="tab"
+                       aria-controls="eat-healthy"
+                       >Eat Healthy</a
+                     >
+                     <a
+                       class="list-group-item list-group-item-action"
+                       id="inner-peace-list"
+                       data-bs-toggle="list"
+                       href="#inner-peace"
+                       role="tab"
+                       aria-controls="inner-peace"
+                       >Find Inner Peace</a
+                     >
+                     <a
+                       class="list-group-item list-group-item-action"
+                       id="inner-the-boss"
+                       data-bs-toggle="list"
+                       href="#the-boss"
+                       role="tab"
+                       aria-controls="the-boss"
+                       >Appease the boss</a
+                     >
+                     <a
+                       class="list-group-item list-group-item-action"
+                       id="inner-the-teacher"
+                       data-bs-toggle="list"
+                       href="#the-teacher"
+                       role="tab"
+                       aria-controls="the-teacher"
+                       >Appease the teacher</a
+                     >
+                     <a
+                       class="list-group-item list-group-item-action"
+                       id="heal-your-brain"
+                       data-bs-toggle="list"
+                       href="#heal-your-brain"
+                       role="tab"
+                       aria-controls="heal-your-brain"
+                       >Heal Your Brain</a
+                     >
+                     <button
+                       type="button"
+                       class="btn btn-warning add-your-own-goal-btn"
+                     >
+                       Add Your Own +
+                     </button>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-md-6 ms-auto">
+                 <div
+                   class="row d-flex justify-content-center align-items-center"
+                 >
+                   <div class="input-group">
+                     <div class="form-outline">
+                       <input
+                         id="search-input"
+                         type="search"
+                         id="form1"
+                         class="form-control"
+                       />
+                     </div>
+                     <button
+                       id="search-button"
+                       type="button"
+                       class="btn btn-primary primary-color"
+                     >
+                       <i class="fas fa-search"></i>
+                     </button>
+                   </div>
+                 </div>
+                 <div
+                   class="row d-flex justify-content-center align-items-center goal-results"
+                 ></div>
+               </div>
+             </div>
+           </div>
+           <div class="container-fluid add-goal-container d-none">
+             Add Goal
+           </div>
+         </div>
+         <!-- <div class="modal-footer">
+         <button type="button" class="btn btn-warning add-your-own-goal-btn">Add Your Own +</button>
+       </div> -->
+       </div>
+     </div>
+   </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/19b6f885a9.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/bootstrap.scripts.js"></script>
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/day.js"></script>
+  <script src="../assets/js/changeBackgroundColorMode.js"></script>
+</html>

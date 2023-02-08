@@ -1,0 +1,104 @@
+.navbar {
+    margin-bottom: 30px;
+}
+  
+/* top view select row */
+.top-view-row {
+    display: flex;
+}
+
+.theme-toggle {
+    width: fit-content
+}
+
+.form-select {
+    width: 170px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.gorh-input {
+    width: 40%;
+}
+
+.modal-nav-col {
+    width: fit-content;
+}
+
+.pick-goal-modal {
+    padding: 20px 0;
+    border: none;
+}
+
+.pick-goal-modal .list-group-item {
+    border: none;
+}
+
+.list-group-item {
+    border-bottom-right-radius: none!important;
+    border-bottom-left-radius: none!important;
+}
+
+.modal-nav-col h2 {
+    font-size: 20px;
+}
+
+.in-between {
+    margin: 5px;
+    border-top: var(--bs-border-width) solid;
+}
+
+.open-goal-modal-btn {
+    width: 40px;
+}
+
+.add-your-own-goal-btn {
+    margin: 15px 0;
+}
+
+/* daily tasks */
+.progress .daily-goal {
+    position: relative;
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
+  }
+  
+  #done-task-animation {
+    position: absolute;
+    right: 80px;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background: none;
+    border: solid 5px;
+    /* float: right; */
+  }
+  
+  .progress-bar h3 {
+    position: absolute;
+    left: 80px;
+  }
+  
+  #done-task-animation i {
+    visibility: hidden;
+    position: absolute;
+      top: 50%;  
+      left: 50%; 
+      transform: translate(-50%, -50%);
+  }
+
+.daily-goal button {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background: none;
+    border: solid 5px;
+    margin: 0;
+}
+/* ------------------------------------------- */
+
+

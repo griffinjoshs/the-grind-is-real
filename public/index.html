@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <body>
+    <!-- <div w3-include-html="top.html"></div> -->
+
+    <select
+      class="time-view-select form-select"
+      aria-label="Default select example"
+    >
+      <option value="day" selected>Today's View</option>
+      <option value="week">Weekly View</option>
+      <option value="month">Monthly View</option>
+      <option value="year">Yearly View</option>
+    </select>
+    <div class="arrow-section">
+      <button id="backwardBtn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button id="forwardBtn">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="selected-view">
+      <h3></h3>
+      <h2></h2>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/19b6f885a9.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.scripts.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="../assets/js/includeHtmlW3.js"></script>
+</html>

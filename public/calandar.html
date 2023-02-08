@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.styles.css" /></head>
+<style>
+/* Style the table */
+.calendar {
+  width: 100%;
+  border-collapse: collapse; /* Collapse the table borders */
+}
+
+/* Style the table header cells */
+.calendar th {
+  text-align: center;
+  padding: 8px;
+  background-color: #f2f2f2; /* Set the background color to light gray */
+}
+
+/* Style the table body cells */
+.calendar td {
+  text-align: center;
+  padding: 8px;
+  background-color: #fff; /* Set the background color to white */
+  border: 1px solid #ddd; /* Add a border */
+}
+
+/* Style the "today" cell */
+.calendar .today {
+  background-color: #0d6efd; /* Set the background color to blue */
+  color: #fff; /* Set the text color to white */
+}
+
+.calandar-head button {
+    background: none;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Create a table with class "calendar" to hold the calendar -->
+            <table class="calendar">
+                <div class="calandar-head d-flex justify-content-evenly">
+                    <!-- see the previous month -->
+                    <button class="last-month h3"><i class="fa-solid fa-arrow-left"></i></button>
+                    <h2 class="h2 viewed-month text-center"></h2>
+
+                    <!-- see the next month -->
+                    <button class="next-month h3"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+              <!-- Create a table header to display the days of the week -->
+              <thead>
+                <tr>
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                </tr>
+              </thead>
+              <!-- Create a table body with id "calendar-body" to hold the calendar cells -->
+              <tbody id="calendar-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+
+</body>
+<script>
+   const calendarBody = document.getElementById('calendar-body'); // Get the calendar body element
+   const calandarHeader = document.querySelector('.viewed-month') // calandar header (month + year)
+const date = new Date(); // Get the current date
+let currentMonth = date.getMonth(); // Get the current month
+let currentYear = date.getFullYear(); // Get the current year
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// Function to create the calendar for a specified month and year
+const createCalendar = (month, year) => {
+  let firstDay = new Date(year, month).getDay(); // Get the first day of the month
+  let daysInMonth = 32 - new Date(year, month, 32).getDate(); // Get the number of days in the month
+
+  let calendar = ''; // Initialize the calendar HTML string
+  let dateCount = 1; // Counter for the current date
+
+  // Loop through 6 rows
+  for (let i = 0; i < 6; i++) {
+    calendar += '<tr>';
+
+    // Loop through 7 columns (one for each day of the week)
+    for (let j = 0; j < 7; j++) {
+      // If it's the first row and the current column is before the first day of the month
+      if (i === 0 && j < firstDay) {
+        calendar += '<td></td>';
+      } else if (dateCount > daysInMonth) { // If all days in the month have been processed
+        break; // Break out of the loops
+      } else {
+        // If the current date is the current day of the month
+        if (dateCount === date.getDate() && month === currentMonth && year === currentYear) {
+          calendar += `<td class="today">${dateCount}</td>`;
+        } else {
+          calendar += `<td>${dateCount}</td>`;
+        }
+
+        dateCount++;
+      }
+    }
+
+    calendar += '</tr>';
+  }
+
+  calendarBody.innerHTML = calendar; // Set the calendar body HTML to the calendar HTML string
+  calandarHeader.innerHTML = months[currentMonth] + " " + currentYear; // Set the calendar header to the current month and year
+};
+
+createCalendar(currentMonth, currentYear); // Call the createCalendar function with the current month and year
+
+
+</script>
+<script
+    src="https://kit.fontawesome.com/19b6f885a9.js"
+    crossorigin="anonymous"
+  ></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap.scripts.js"></script>
+</html>
