@@ -12,51 +12,78 @@
   <body>
 <!-- the same on all goal viewing pages -->
 <section class="top-info-area">
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+  <nav class="navbar bg-body-tertiary p-0">
+    <div class="container-fluid w-100 bg-mainColor">
+      <!-- <a class="navbar-brand" href="#">navbar</a> -->
+      <div class="row d-flex justify-content-between w-100">
+
+        <div class="col-6 nav-left d-flex mh-100 px-0 justify-content-stretch">
+            <div class="current-level d-flex align-items-center justify-content-center mh-100">
+                <div class="level-square bg-warning d-flex justify-content-center align-items-center">
+                    <h6 class="h6 text-dark">1</h6>
+                </div>
+                <div>
+                <div class="username">
+                    @griffinjoshs
+                </div>
+                <div class="progress w-100">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          <div class="col-6 nav-right d-flex justify-content-end align-items-center py-2 px-0">
+            <div class="coin-container container d-flex align-items-center align-items-center">
+                <i class="h5 fa-sharp fa-solid fa-coins text-warning align-self-center"></i>
+                <div class="all-coins d-flex align-items-center text-mainColor px-4">
+                    5
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li>
+            <hr class="dropdown-divider">
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <div class="color-toggle form-check form-switch" style="width: fit-content;">
-          <input class="form-check-input" type="checkbox" role="switch" id="toggle-bgColor">
-          <label class="form-check-label" for="toggle-bgColor">Toggle Dark Mode</label>
-        </div>
-      </div>
+      </li>
+    </ul>
+    <form class="d-flex mt-3" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <div class="color-toggle form-check form-switch" style="width: fit-content;">
+      <input class="form-check-input" type="checkbox" role="switch" id="toggle-bgColor">
+      <label class="form-check-label" for="toggle-bgColor">Toggle Dark Mode</label>
     </div>
   </div>
-</nav>
+</div>
+  </nav>
  <!-- Button trigger modal -->
  <div class="container goal-page-top my-4">
   <div class="top-view-row row d-flex justify-content-start align-items-center">

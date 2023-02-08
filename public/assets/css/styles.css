@@ -1,7 +1,53 @@
+:root {
+    --main-color: white;
+  }
+  
+  @media (data-bs-theme: dark) {
+    :root {
+      --main-color: black;
+    }
+  }
+  
+  .text-mainColor {
+    color: var(--main-color);
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+  }
+
+  .bg-mainColor {
+    background-color: var(--main-color);
+  }
+  
+
 .navbar {
     margin-bottom: 30px;
 }
-  
+
+.current-level {
+    width: 30%;
+}
+
+.level-square {
+    width: 20%;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.coin-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.coin-container i {
+    z-index: 100;
+}
+
+.all-coins {
+    margin-left: -10px;
+}
+
 /* top view select row */
 .top-view-row {
     display: flex;
