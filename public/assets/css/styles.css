@@ -17,7 +17,10 @@
   .bg-mainColor {
     background-color: var(--main-color);
   }
-  
+
+  .navbar-toggler {
+    border: none
+  }  
 
 .navbar {
     margin-bottom: 30px;
