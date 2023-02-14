@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 9999;
+const PORT = process.env.PORT || 9000;
 require("dotenv").config()
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -16,6 +16,7 @@ app.use(express.static(__dirname + '/public'));
 // });
 
 require("./serverFiles/routes/html.routes")(app)
+// require("./serverFiles/dummyData/dummy.json")(app)
 // require('./serverFiles/routes/api.routes')(app)
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`))

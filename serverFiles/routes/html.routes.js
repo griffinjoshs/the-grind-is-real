@@ -13,6 +13,11 @@ module.exports = function (app) {
     app.get("/dashboard/day/", function (req, res) {
         res.sendFile(path.join(__dirname, "../../public/goalpageviews/day.html"));
     });
+      
+    app.get("/dashboard/day/:date", function (req, res) {
+        let date = req.params.date;
+        res.sendFile(path.join(__dirname, `../../public/goalpageviews/day-${date}.html`));
+    })
 
      // Goals - Weekly View
      app.get("/dashboard/week", function (req, res) {
@@ -28,4 +33,11 @@ module.exports = function (app) {
      app.get("/dashboard/year", function (req, res) {
         res.sendFile(path.join(__dirname, "../../public/goalpageviews/year.html"));
     });
+
+    // smart goal generator
+    app.get("/smartgoals", function (req, res) {
+        res.sendFile(path.join(__dirname, "../../public/smartGoals.html"));
+    });
 };
+
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/css/bootstrap.styles.css" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<style></style>
+
+<body>
+  <div class="container">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item specific">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+            aria-expanded="false" aria-controls="flush-collapseOne">
+            Specific
+          </div>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div class="make-goal-question">
+              <strong>What exactly is your goal?</strong> <br />
+              It's important to have a clear and specific goal in mind when
+              starting any project or undertaking. Being specific on your goal
+              provides focus, direction, and motivation. Without a
+              specificity, it's easy to get sidetracked and lose sight of what
+              you want to achieve.
+              <div class="input-group mb-3 d-flex flex-column justify-content-left">
+                <div class="input-group mb-3 d-flex">
+                  <label>I will</label>
+                  <input type="text" class="form-control" id="specific-goal" placeholder="Write Goal here"
+                    aria-label="Write Goal here" aria-describedby="specificButton" />
+                  <button class="btn specific btn-outline-secondary" type="button" id="specificButton">
+                    Button
+                  </button>
+                </div>
+              </div>
+              <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar progress-bar-specific"></div>
+              </div>
+              <p class="how-am-I-doing">Can be More Specific</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item measurable achievabile relevant">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+            aria-expanded="false" aria-controls="flush-collapseTwo">
+            Measurable, Achievable, Relevant
+          </div>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body mh-100">
+            <div class="container make-goal-question">
+              <!-- <div class="display-goal-area d-flex justify-content-center py-3">
+                  <h3>Goal:</h3>
+                  <p class="h3 display-goal"></p>
+                </div> -->
+              <strong>How exactly will you measure the success of your
+                goal?</strong>
+              <br />
+              It is important to have a measurable goal so that you can track
+              your progress and see how close you are to achieving it. This
+              helps to keep you motivated and on track, and also allows you to
+              make any necessary adjustments along the way. A measurable goal
+              should have specific, quantifiable targets such as a date, time,
+              or amount. For example, if your goal is to increase sales, you
+              can set a specific target for the amount of increase you want to
+              see. You can then track your progress by regularly measuring
+              your sales numbers and comparing them to your target. This will
+              give you a clear understanding of how close you are to reaching
+              your goal and help you make informed decisions about what you
+              need to do next to achieve it.
+              <!-- <div class="input-container container w-100"> -->
+              <!-- <div
+                  class="input-group mb-3 d-flex flex-row justify-content-left mw-100"
+                > -->
+              <div class="form-group w-100 d-flex justify-content-evenly align-items-center" style="padding: 40px 0;">
+                <h3 class="h3 display-goal"></h3>
+                <select class="form-control when w-25" id="exampleSelect1">
+                  <option selected>when?</option>
+                  <option>every day</option>
+                  <option>every two days</option>
+                  <option>3 times a week</option>
+                  <option>twice a week</option>
+                  <option>once a week</option>
+                  <option>once every two weeks</option>
+                  <option>twice a month</option>
+                  <option>once a month</option>
+                </select>for<input class="how-long" style="width: 35px" /><select
+                  class="form-control time-measurement w-25" id="howLongSelect">
+                  <option selected>for how long?</option>
+                  <option>minutes</option>
+                  <option>hours</option>
+                </select><button class="btn measurable btn-outline-secondary" type="button" id="measurableButton">
+                  Button
+                </button>
+              </div>
+              <!-- </div> -->
+              <!-- </div> -->
+            </div>
+            <div class="container progress-bar-container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-achievable"></div>
+                  </div>
+                  Achievability
+                </div>
+              </div>
+              <div class="row" style="padding-top: 40px;">
+                <div class="col-12">
+                  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-relevant"></div>
+                  </div>
+                </div>
+              </div>
+              Relevance To Your Overall for a Plan
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item time-bound">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+            aria-expanded="false" aria-controls="flush-collapseThree">
+            Time-Bound
+          </div>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            
+            <div class="form-group">
+            </select>
+              <label for="exampleFormControlSelect1">              
+                <strong>What is your deadline for accomplishing this goal?</strong> <br />
+              </label>
+              <div class="timely-inputs">
+                <select class="form-control" id="timelySelect" style="width: 40%">
+                  <option selected>Select time:</option>
+                  <option>Days</option>
+                  <option>Weeks</option>
+                  <option>Months</option>
+                  <option>Year</option>
+                </select>
+
+                <input class="number-of" style="width: 35px" />
+              <h4 class="timely-value"></h4>
+              <button class="btn timely-btn btn-outline-secondary">Set Time</button>
+              </div>
+          
+              <h2 class="display-goal-text"></h2>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+<script>
+let overallPlan = "fuck bitches, get money"
+
+  let goalArray = [];
+
+  const setArray = (type, goal) => {
+    let index = 0;
+    if (goalArray.length === 0) {
+      goalArray.push({ [type]: goal });
+    } else {
+      index = goalArray.length - 1;
+      goalArray[index][type] = goal;
+    }
+  };
+
+  let howAmIDoing = document.querySelector(".how-am-I-doing");
+  let widthPercent = 0;
+  let widthPercentAchievable = 0;
+  let widthPercentRelevant = 0;
+  let progressBarSpecific = document.querySelector(".progress-bar-specific");
+  let progressBarAchievable = document.querySelector(".progress-bar-achievable");
+  let progressBarRelevant = document.querySelector(".progress-bar-relevant");
+
+  const showGoal = () => {
+    document.querySelector(".display-goal").innerHTML = goalArray[0].specific;
+  };
+
+  const progressBarPercentSpecific = () => {
+    showGoal();
+    progressBarSpecific.style.width = widthPercent + "%";
+    if (widthPercent <= 35) {
+      progressBarSpecific.classList.add("bg-danger");
+      howAmIDoing.innerHTML = "Too broad, Be more specific";
+    } else if (widthPercent > 35 && widthPercent <= 80) {
+      progressBarSpecific.classList.add("bg-warning");
+      howAmIDoing.innerHTML = "Ok, but you should be more specific";
+    } else if (widthPercent >= 80) {
+      progressBarSpecific.classList.add("bg-success");
+      howAmIDoing.innerHTML = "Super Specific, let's go!!!";
+    }
+  };
+
+  const progressBarPercentAchievable = () => {
+    // showGoal();
+    progressBarAchievable.style.width = widthPercentAchievable + "%";
+    if (widthPercentAchievable <= 35) {
+      progressBarAchievable.classList.add("bg-danger");
+      howAmIDoing.innerHTML = "This is just too much";
+    } else if (widthPercentAchievable > 35 && widthPercentAchievable <= 80) {
+      progressBarAchievable.classList.add("bg-warning");
+      howAmIDoing.innerHTML = "Better, but your Still tryna bite off more than u could chew";
+    } else if (widthPercentAchievable >= 80) {
+      progressBarAchievable.classList.add("bg-success");
+      howAmIDoing.innerHTML = "Very Achievable";
+    }
+  };
+
+  const progressBarPercentRelevant = () => {
+    // showGoal();
+    progressBarRelevant.style.width = widthPercentAchievable + "%";
+    if (progressBarRelevant <= 35) {
+      progressBarRelevant.classList.add("bg-danger");
+      howAmIDoing.innerHTML = "This is just too much";
+    } else if (widthPercentAchievable > 35 && widthPercentAchievable <= 80) {
+      progressBarRelevant.classList.add("bg-warning");
+      howAmIDoing.innerHTML = "Better, but your Still tryna bite off more than u could chew";
+    } else if (widthPercentAchievable >= 80) {
+      progressBarRelevant.classList.add("bg-success");
+      howAmIDoing.innerHTML = "Very Achievable";
+    }
+  };
+
+  const specificInputField = document.querySelector("#specific-goal");
+  const specificButton = document.querySelector("#specificButton");
+  const measurableButton = document.querySelector("#measurableButton");
+
+  specificButton.addEventListener("click", () => {
+    const inputValue = document.getElementById("specific-goal").value;
+    const accordionMeasurable = document.querySelector(
+      ".accordion-item.measurable"
+    );
+
+    if (inputValue) {
+      accordionMeasurable.classList.remove("disabled");
+    }
+    let specificGoal = "I will" + " " + specificInputField.value;
+    setArray("specific", specificGoal);
+    console.log(goalArray[0].specific);
+    widthPercent = 81;
+    progressBarPercentSpecific();
+    console.log(goalArray);
+  });
+
+  measurableButton.addEventListener("click", () => {
+    let when = document.querySelector(".when").value;
+    let howLong = document.querySelector(".how-long").value;
+    let timeMeasurement = document.querySelector(".time-measurement").value;
+
+    let measurableGoal = when + " for " + howLong + " " + timeMeasurement;
+
+    widthPercentAchievable = 93
+    progressBarPercentAchievable()
+    widthPercentRelevant = 65
+    progressBarPercentRelevant()
+    setArray("measurable", measurableGoal);
+    setArray("achievable", widthPercentAchievable);
+    setArray("relevant", widthPercentRelevant);
+    console.log(goalArray[0].specific + " " + goalArray[0].measurable);
+    console.log(goalArray);
+  });
+
+  document.querySelector("#timelySelect").addEventListener("change", function() {
+    document.querySelector(".timely-value").textContent = this.value;
+  });
+
+  const timelyBtn = document.querySelector(".timely-btn");
+  const numberOf = document.querySelector(".number-of");
+  const timelySelect = document.querySelector("#timelySelect");
+  
+  timelyBtn.addEventListener("click", () => {
+    let timelyPick = timelySelect.options[timelySelect.selectedIndex].textContent
+    console.log("Time-Bound: ", numberOf.value + timelyPick);
+    setArray("timeBound", 'for ' + numberOf.value + ' ' + timelyPick)
+    console.log(goalArray)
+    document.querySelector(".display-goal-text").innerHTML = goalArray[0].specific + " " + goalArray[0].measurable + " " + goalArray[0].timeBound
+  })
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap.scripts.js"></script>
+
+</html>
